@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "lint": "eslint './src/**/*.ts' --fix && prettier-package-json --write",
+    "start": "ts-node-dev --respawn --transpile-only src/Index.ts",
+    "test": "./node_modules/.bin/jest --clearCache && ./node_modules/.bin/jest"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bignumber.js": "^9.0.2",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^11.0.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bignumber.js": "^5.0.0",
+    "@types/jest": "^28.1.4",
+    "@types/koa": "^2.13.4",
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/koa-router": "^7.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1",
+    "prettier-package-json": "^2.6.4",
+    "ts-jest": "^28.0.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ]
+  }
+}
